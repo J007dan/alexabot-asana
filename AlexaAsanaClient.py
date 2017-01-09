@@ -36,17 +36,15 @@ from six import print_
 # 6. Set timezone offset to time difference from GMT. TODO: use pytz to properly
 #    handle timezones.
 
-ASANA_WORKSPACE_ID = 123456789123456789
+ASANA_WORKSPACE_ID = 240062238207030
 
 ASANA_USERS = {
-    "AlexaBot":123456789, # Keep this entry and replace with your AlexaBot's ID
-    "Peter":123456789,
-    "Charlie":123456789,
-    "David":123456789,
-    "Elizabeth":123456789,
+    "AlexaBot":240062242721073, # Keep this entry and replace with your AlexaBot's ID
+    "Diane":240062729451420,
+    "Jordan":31656619524757,
 }
 
-ASANA_PROJECT_ID = 123456789123456789 # Alexa List
+ASANA_PROJECT_ID = 240065452905589 # Alexa List
 
 TIMEZONE_OFFSET = -8
 
@@ -70,7 +68,7 @@ def alexa_event_handler(event, *args, **kwargs):
     # Determine what Alexa should say back to the user
     # TODO: handle Asana errors
     if success:
-        msg = "Added a task for " + task_assignee_name + ". " + task_title + ". "
+        msg = "Added a task for " + task_assignee_name + ". " + task_title + ". Good luck with that! "
     else:
         msg = "I'm sorry. There was an error creating the task."
 
